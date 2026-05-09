@@ -1,0 +1,150 @@
+body{ 
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    margin:10px;
+    background-color: #f5f5f5;
+}
+p { width:100% ;
+    color: #3e0505;
+}
+.portada {
+    height: 300px;
+    background-image: url("salta2.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: #490303f4;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: Georgia, serif;
+
+}
+
+.titulo_portada{ border-color: #461805;
+    border-radius: 10px;
+    font-size: 80px;
+    background-color: #f4e9c131;
+}
+
+.contenedor{width: 100%;
+display: flex;
+justify-content:space-between;
+height: 300px;
+transition: 0.3s;
+padding: 0%;
+}
+
+.contenedor li{  
+    position: relative;
+    overflow: hidden;
+    flex:0 0 120px ;
+    border-radius: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1.2px solid #eee;
+        box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.4),
+    -2px -5px -10px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor li img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor li,
+.contenedor li img{
+    transition: 0.3s;
+}
+.contenedor li .contenido{
+    transition: 1.5s ease ;
+}
+.contenedor span{
+    text-align: center;
+    width: 75%;
+}
+.contenedor h2{
+    font-weight: 200;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    line-height: 4px;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    color: #eee;
+}
+.contenedor p{
+    color: #eee;
+    font-size: 20px;
+    width: 100%;
+    text-align:center;
+}
+.contenedor li .contenido{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 15px;
+    background: 
+    linear-gradient(
+        0deg,
+        rgb(0 0 0 / 70%) 10%,
+        rgb(255 255 255 / 0%) 100%
+    );
+    opacity: 0;
+    visibility: hidden;
+}
+.contenedor:hover{
+    gap:0;
+}
+
+.contenedor li .contenido span{
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    bottom: 0px;
+    translate: -50%;
+    scale: 0.85;
+    visibility: hidden;
+    opacity: 0;
+}
+.contenedor li:hover{
+    flex: 0 1 260px;
+    scale: 1.1;
+    z-index: 10;
+    opacity: 1;
+}
+.contenedor li:hover .contenido{
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor li:hover span{
+    scale: 1;
+    opacity: 1;
+    visibility: visible;
+}
+video {
+    display: block;
+    margin: 30px auto;
+    border-radius: 10px;
+    background-color: #3e0505;
+    background-position: 70%;
+}
+.seccion-video {
+    background-color: #6d1a1a;
+    width: 100%;
+    padding: 40px 0;
+    margin: 20px auto;
+}
+iframe {
+    display: block;
+    margin: 40px auto;
+    border-radius: 10px;
+}
